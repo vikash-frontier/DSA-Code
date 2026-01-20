@@ -20,6 +20,6 @@ function secondLargestNumber(arr) {
 }
 
 
-const arr = [10,5,10, 7];
+const arr = [10, 5, 10, 7];
 const result = secondLargestNumber(arr);
 console.log(result);
