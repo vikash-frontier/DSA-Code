@@ -60,13 +60,12 @@ const n = 3;
 
 function merge(nums1, m, nums2, n) {
   let p1 = m - 1;
-  p2 = n - 1;
+  let p2 = n - 1;
 
   for (let i = m + n - 1; n >= 0; i--) {
     if (p2 < 0) {
       break;
     }
-
     if (p1 >= 0 && nums1[p1] > nums2[p2]) {
       nums1[i] = nums1[p1];
       p1--;
@@ -78,6 +77,16 @@ function merge(nums1, m, nums2, n) {
   return nums1;
 }
 
-console.log(merge(nums1, m, nums2, n));
+// console.log(merge(nums1, m, nums2, n));
 // Time Complexity: O(m + n)
 // Space Complexity: O(1)
+
+function mergeSortedArray(nums1, m, nums2, n) {
+  //   let res = [...nums1, ...nums2];
+  let res = nums1.concat(nums2);
+  // res.sort((a, b) => a - b);
+
+  console.log(res.sort((a, b) => a - b));
+}
+
+mergeSortedArray(nums1, m, nums2, n);
